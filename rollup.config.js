@@ -46,7 +46,7 @@ export default [
     ],
     plugins: [
       cjs({
-        include: 'node_modules/**'
+        include: ['node_modules/**', 'cert-verifier-js/***']
       }),
       babel({
         babelrc: false,

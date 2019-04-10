@@ -1,0 +1,4 @@
+[submodule "cert-verifier-js"]
+	path = cert-verifier-js
+	url = https://github.com/davidlj95/cert-verifier-js
+	branch = cowcerts
