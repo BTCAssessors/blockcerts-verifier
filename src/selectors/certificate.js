@@ -1,6 +1,7 @@
 import VERIFICATION_STATUS from '../constants/verificationStatus';
 import domain from '../domain';
 import sanitize from '../../sanitizer/sanitizer';
+import cowcertsFilterAlert from "../../sanitizer/CowcertsFilterAlert";
 
 export function getCertificateDefinition (state) {
   return state.certificateDefinition;
@@ -73,7 +74,7 @@ export function getDisplayHTML (state) {
   const certificateDefinition = getCertificateDefinition(state);
 
   if (certificateDefinition) {
-    return sanitize(certificateDefinition.certificateJson.displayHtml);
+    return sanitize(cowcertsFilterAlert(certificateDefinition.certificateJson.displayHtml));
   }
 
   return '';
