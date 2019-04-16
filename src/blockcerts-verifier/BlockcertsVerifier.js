@@ -5,11 +5,9 @@ import '../components/organisms/VerificationModal';
 import '../components/atoms/DragAndDrop';
 import ErrorMessage from '../components/atoms/ErrorMessage/';
 import CSS from '../components/atoms/GlobalStylesheet';
-import '../components/organisms/CardCertificate';
-import '../components/organisms/FullCertificate';
+import '../components/organisms/VisualizerTabs';
 import '../components/molecules/Footer/';
 import { APICamelCase } from '../models/API';
-import * as DISPLAY_MODE from '../constants/displayMode';
 
 class BlockcertsVerifier extends LitElement {
   static get properties () {
@@ -32,7 +30,6 @@ class BlockcertsVerifier extends LitElement {
 
   _render (_props) {
     const bodyClass = _props.hasCertificate ? 'buv-c-verifier-body  buv-c-verifier-body--padded' : '';
-
     return html`
       ${CSS}
       <section class='buv-c-verifier-main'>
@@ -42,10 +39,7 @@ class BlockcertsVerifier extends LitElement {
               ${ErrorMessage(_props.errorMessage, true)}
               <buv-certificate-input></buv-certificate-input>
               <buv-action-menu></buv-action-menu>
-              ${_props.displayMode === DISPLAY_MODE.FULL
-    ? html`<buv-full-certificate></buv-full-certificate>`
-    : html`<buv-card-certificate></buv-card-certificate>`
-}
+              <buv-visualizer-tabs></buv-visualizer-tabs>
               <buv-verification-modal></buv-verification-modal>
             </section>
             <buv-footer interactive></buv-footer>

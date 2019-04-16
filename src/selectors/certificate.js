@@ -215,3 +215,25 @@ export function getCertificateSeal (state) {
 
   return '';
 }
+
+export function getCertificateSED (state) {
+  let sedEndorsement = null;
+  const certificateDefinition = getCertificateDefinition(state);
+  if (certificateDefinition) {
+    const certificateJson = certificateDefinition.certificateJson;
+    if (certificateJson.signature && certificateJson.signature.endorsements) {
+      const endorsements = certificateJson.signature.endorsements;
+      if (endorsements instanceof Array) {
+        endorsements.forEach(function(endorsement) {
+          if(endorsement.claim instanceof Object &&
+              endorsement.claim.type instanceof Object &&
+              endorsement.claim.type.includes("SEDClaim")) {
+            sedEndorsement = endorsement;
+          }
+        });
+      }
+    }
+  }
+
+  return sedEndorsement;
+}

@@ -2,7 +2,7 @@
 
 $sectionSpacer: 20px;
 
-.buv-c-full-certificate {
+.buv-c-sed-endorsement {
   box-shadow: 0 1px 5px rgba(0, 0, 0, .15);
   padding: $sectionSpacer;
   background-color: #fff;
@@ -18,20 +18,20 @@ $sectionSpacer: 20px;
 }
 
 // No direct access available
-.buv-c-full-certificate section {
+.buv-c-sed-endorsement section {
   max-width: 100%;
   padding: 0;
 }
 
 // No direct access available
-.buv-c-full-certificate img {
+.buv-c-sed-endorsement img {
   max-width: 100%;
   height: auto;
   width: inherit;
 }
 
 @media only screen and (min-width: 640px) {
-  .buv-c-full-certificate {
+  .buv-c-sed-endorsement {
     min-height: 550px;
     padding: calc(#{$sectionSpacer} * 2) calc(#{$sectionSpacer} * 4);
     font-size: 16px;
