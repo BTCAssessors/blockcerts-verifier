@@ -7,9 +7,9 @@ $sectionSpacer: 20px;
   padding: $sectionSpacer;
   background-color: #fff;
   display: block;
-  font-family: serif;
+  font-family: sans-serif;
   text-align: center;
-  color: #49555f;
+  color: black;
   font-size: 12px;
   line-height: 1.5;
   overflow: auto;
@@ -38,15 +38,34 @@ $sectionSpacer: 20px;
   }
 }
 
-.buv-c-full-certificate__button {
-  margin-top: 15px;
+.buv-c-sed-endorsement table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2em;
 }
 
-.buv-c-full-certificate__details {
-  display: flex;
-  justify-content: space-between;
+.buv-c-sed-endorsement table tr td:first-child,
+.buv-c-sed-endorsement table tr th:first-child {
+  vertical-align: bottom;
+  text-align: left;
 }
 
-.buv-c-full-certificate__details-list {
-  width: calc(100% - 105px); // 105 px is Button width
+.buv-c-sed-endorsement table thead {
+  border-bottom: solid 3px #787852;
+  font-size: 1.25em;
+}
+
+tbody:before {
+  content: "-";
+  display: block;
+  line-height: 1em;
+  color: transparent;
+}
+
+.buv-c-sed-endorsement .lang-ca {
+  color: #787852;
+}
+
+.buv-c-sed-endorsement .lang-en {
+  color: #1D14FF;
 }
