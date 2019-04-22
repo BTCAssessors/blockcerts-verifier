@@ -60,12 +60,6 @@ div.main {
   border-radius: 1em;
 }
 
-div.page {
-  width: 100%;
-  display: flex;
-  page-break-after: always;
-}
-
 div.content {
   width: 100%;
   position: relative;
@@ -73,6 +67,7 @@ div.content {
 
 div.sidebar {
   padding-right: 3em;
+  display: none;
 }
 
 div.sidebar img {
@@ -95,18 +90,24 @@ div.sidebar div.sidetext p {
   text-align: justify;
 }
 
-@media screen {
-  div.sidebar {
-    display: none;
-  }
-  div.content {
-    width: 100%;
-  }
-}
-
 @media (max-width: 1080px) {
   div.sidebar {
     display: none;
+  }
+}
+
+@media (min-width: 1080px) {
+  //div.main {
+  //  width: 70%;
+  //  padding: 1em;
+  //}
+
+  #page1 div.content {
+    width: 80%;
+  }
+
+  #page1 div.sidebar {
+    width: 20%;
   }
 }
 
@@ -128,6 +129,10 @@ div.content table.recipient td {
 div.content table td {
   padding: 0.5em;
   text-align: left;
+}
+
+div.content table img.signature {
+  height:4em;
 }
 
 div.content table tr td:first-child,
