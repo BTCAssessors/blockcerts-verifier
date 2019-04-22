@@ -75,6 +75,8 @@ class VisualizerTabs extends LitElement {
 window.customElements.define('buv-visualizer-tabs-raw', VisualizerTabs);
 
 function VisualizerTabsWrapper ({ hasCertificateDefinition, sedEndorsement }) {
+    if(!hasCertificateDefinition)
+        return null;
     return html`<buv-visualizer-tabs-raw
     hasCertificateDefinition='${hasCertificateDefinition}'
     sedEndorsement='${sedEndorsement}'
