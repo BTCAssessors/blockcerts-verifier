@@ -2,7 +2,7 @@
 
 $sectionSpacer: 20px;
 
-.buv-c-sed-endorsement {
+.buv-c-eds-endorsement {
   box-shadow: 0 1px 5px rgba(0, 0, 0, .15);
   padding: $sectionSpacer;
   background-color: #fff;
@@ -18,20 +18,20 @@ $sectionSpacer: 20px;
 }
 
 // No direct access available
-.buv-c-sed-endorsement section {
+.buv-c-eds-endorsement section {
   max-width: 100%;
   padding: 0;
 }
 
 // No direct access available
-.buv-c-sed-endorsement img {
+.buv-c-eds-endorsement img {
   max-width: 100%;
   height: auto;
   width: inherit;
 }
 
 @media only screen and (min-width: 640px) {
-  .buv-c-sed-endorsement {
+  .buv-c-eds-endorsement {
     min-height: 550px;
     font-size: 16px;
   }

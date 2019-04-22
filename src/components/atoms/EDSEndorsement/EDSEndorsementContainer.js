@@ -1,15 +1,15 @@
 import connector from '../../../store/connector';
-import SEDEndorsement from './SEDEndorsement';
+import EDSEndorsement from './EDSEndorsement';
 import {
   getCertificateDefinition, getCertificateRecipient,
-  getCertificateSED
+  getCertificateEDS
 } from '../../../selectors/certificate';
 
 export const mapStateToProps = (state) => ({
   certificateDefinition: getCertificateDefinition(state),
-  sedEndorsement: getCertificateSED(state),
+  edsEndorsement: getCertificateEDS(state),
   recipientEndorsement: getCertificateRecipient(state)
 });
 
-const SEDEndorsementContainer = connector(SEDEndorsement, { mapStateToProps });
-export { SEDEndorsementContainer };
+const EDSEndorsementContainer = connector(EDSEndorsement, { mapStateToProps });
+export { EDSEndorsementContainer };

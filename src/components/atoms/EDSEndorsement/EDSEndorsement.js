@@ -1,20 +1,20 @@
 import { html } from '@polymer/lit-element';
-import CSS from './_components.sed-endorsement-css';
+import CSS from './_components.eds-endorsement-css';
 
-export default function SEDEndorsement ({
+export default function EDSEndorsement ({
   certificateDefinition,
-  sedEndorsement,
+  edsEndorsement: edsEndorsement,
   recipientEndorsement
 }) {
   if (!certificateDefinition) {
     return null;
   }
 
-  let sedClaim = sedEndorsement.claim;
+  let edsClaim = edsEndorsement.claim;
 
   return html`
     ${CSS}
-    <section class='buv-c-sed-endorsement'>
+    <section class='buv-c-eds-endorsement'>
 <div class="main">
    <div class="page" id="page1">
     <div class="sidebar">
@@ -228,7 +228,7 @@ export default function SEDEndorsement ({
         <td>
         </td>
         <td class="lang-1">
-        ${sedClaim.mainField}
+        ${edsClaim.mainField}
         </td>
         <td class="lang-2">
         #TODO

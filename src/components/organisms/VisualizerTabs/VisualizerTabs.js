@@ -1,6 +1,6 @@
 import {html, LitElement} from '@polymer/lit-element';
 import CSS from './_components.visualizer-tabs-css';
-import '../../atoms/SEDEndorsement';
+import '../../atoms/EDSEndorsement';
 import '../../organisms/CardCertificate';
 import '../../organisms/FullCertificate';
 import * as DISPLAY_MODE from "../../../constants/displayMode";
@@ -15,7 +15,7 @@ class VisualizerTabs extends LitElement {
     static get properties () {
         return {
             hasCertificateDefinition: Boolean,
-            sedEndorsement: Object,
+            edsEndorsement: Object,
             showCertificate: Boolean
         };
     }
@@ -32,20 +32,20 @@ class VisualizerTabs extends LitElement {
             return;
         }
 
-        if(id === 'tab-sed') {
+        if(id === 'tab-eds') {
             this.showCertificate = false;
-            this.shadowRoot.getElementById('tab-sed').classList.add('active');
+            this.shadowRoot.getElementById('tab-eds').classList.add('active');
             this.shadowRoot.getElementById('tab-title').classList.remove('active');
         } else if (id === 'tab-title') {
             this.showCertificate = true;
-            this.shadowRoot.getElementById('tab-sed').classList.remove('active');
+            this.shadowRoot.getElementById('tab-eds').classList.remove('active');
             this.shadowRoot.getElementById('tab-title').classList.add('active');
         } else {
             console.log(`Unknown id (${id}) triggered tab change`);
         }
     }
 
-    _render({hasCertificateDefinition, sedEndorsement}) {
+    _render({hasCertificateDefinition, edsEndorsement}) {
         if (!hasCertificateDefinition) {
             return null;
         }
@@ -57,16 +57,16 @@ class VisualizerTabs extends LitElement {
             html`<buv-full-certificate></buv-full-certificate>` :
             html`<buv-card-certificate></buv-card-certificate>`}`;
 
-        let sedComponent = html`${sedEndorsement ? html`<buv-sed-endorsement></buv-sed-endorsement>` : ''}`;
+        let edsComponent = html`${edsEndorsement ? html`<buv-eds-endorsement></buv-eds-endorsement>` : ''}`;
 
         return html`
             ${CSS}
-            ${sedEndorsement ? html`
+            ${edsEndorsement ? html`
             <div class='buv-c-tabs'>
                 <div class='buv-c-tab active' id='tab-title' on-click='${(e) => this._handleClick(e)}'>Títol</div>
-                <div class='buv-c-tab' id='tab-sed' on-click='${(e) => this._handleClick(e)}'>Suplement Europeu</div>
+                <div class='buv-c-tab' id='tab-eds' on-click='${(e) => this._handleClick(e)}'>Suplement Europeu</div>
             </div>` : ''}
-            ${this.showCertificate ? certificateComponent :sedComponent}
+            ${this.showCertificate ? certificateComponent :edsComponent}
         `;
 
     }
@@ -74,12 +74,12 @@ class VisualizerTabs extends LitElement {
 
 window.customElements.define('buv-visualizer-tabs-raw', VisualizerTabs);
 
-function VisualizerTabsWrapper ({ hasCertificateDefinition, sedEndorsement }) {
+function VisualizerTabsWrapper ({ hasCertificateDefinition, edsEndorsement }) {
     if(!hasCertificateDefinition)
         return null;
     return html`<buv-visualizer-tabs-raw
     hasCertificateDefinition='${hasCertificateDefinition}'
-    sedEndorsement='${sedEndorsement}'
+    edsEndorsement='${edsEndorsement}'
     ></buv-visualizer-tabs-raw>`;
 }
 

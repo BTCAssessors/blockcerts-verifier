@@ -216,7 +216,7 @@ export function getCertificateSeal (state) {
   return '';
 }
 
-export function getCertificateSED (state) {
+export function getCertificateEDS (state) {
   let sedEndorsement = null;
   const certificateDefinition = getCertificateDefinition(state);
   if (certificateDefinition) {
@@ -227,7 +227,7 @@ export function getCertificateSED (state) {
         endorsements.forEach(function(endorsement) {
           if(endorsement.claim instanceof Object &&
               endorsement.claim.type instanceof Object &&
-              endorsement.claim.type.includes("SEDClaim")) {
+              endorsement.claim.type.includes("EDSClaim")) {
             sedEndorsement = endorsement;
           }
         });
