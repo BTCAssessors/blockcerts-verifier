@@ -33,7 +33,7 @@ class SocialShare extends LitElement {
       },
       {
         name: 'Twitter',
-        shareUrl: `https://twitter.com/intent/tweet?url=${url}`
+        shareUrl: `https://twitter.com/intent/tweet?text=Tinc un nou certificat acadèmic!&url=${url}`
       }
     ];
 
