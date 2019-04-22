@@ -225,10 +225,10 @@ export default function EDSEndorsement ({
        <td>
        </td>
        <td class="lang-1">
-        ${edsEndorsement.claim.mainField}
+        ${edsEndorsement.claim.ca.mainField}
        </td>
        <td class="lang-2">
-        #TODO
+        ${edsEndorsement.claim.en.mainField}
        </td>
       </tr>
       <tr>
@@ -249,10 +249,10 @@ export default function EDSEndorsement ({
        <td>
        </td>
        <td class="lang-1">
-        ${edsEndorsement.claim.awardingInstitution}
+        ${edsEndorsement.claim.ca.awardingInstitution}
        </td>
        <td class="lang-2">
-        #TODO
+        ${edsEndorsement.claim.en.awardingInstitution}
        </td>
       </tr>
       <tr>
@@ -273,10 +273,10 @@ export default function EDSEndorsement ({
        <td>
        </td>
        <td class="lang-1">
-        ${edsEndorsement.claim.language}
+        ${edsEndorsement.claim.ca.language}
        </td>
        <td class="lang-2">
-        #TODO
+        ${edsEndorsement.claim.en.language}
        </td>
       </tr>
      </tbody>
@@ -319,10 +319,10 @@ export default function EDSEndorsement ({
        <td>
        </td>
        <td class="lang-1">
-        ${edsEndorsement.claim.studiesLevel}
+        ${edsEndorsement.claim.ca.studiesLevel}
        </td>
        <td class="lang-2">
-        #TODO
+        ${edsEndorsement.claim.en.studiesLevel}
        </td>
       </tr>
       <tr>
@@ -345,10 +345,10 @@ export default function EDSEndorsement ({
        <td>
        </td>
        <td class="lang-1">
-        ${edsEndorsement.claim.studiesLength}
+        ${edsEndorsement.claim.ca.studiesLength}
        </td>
        <td class="lang-2">
-        #TODO
+        ${edsEndorsement.claim.en.studiesLength}
        </td>
       </tr>
       <tr>
@@ -371,10 +371,10 @@ export default function EDSEndorsement ({
        <td>
        </td>
        <td class="lang-1">
-        ${edsEndorsement.claim.access}
+        ${edsEndorsement.claim.ca.access}
        </td>
        <td class="lang-2">
-        #TODO
+        ${edsEndorsement.claim.en.access}
        </td>
       </tr>
      </tbody>
@@ -417,10 +417,10 @@ export default function EDSEndorsement ({
        <td>
        </td>
        <td class="lang-1">
-        ${edsEndorsement.claim.mode}
+        ${edsEndorsement.claim.ca.mode}
        </td>
        <td class="lang-2">
-        #TODO
+        ${edsEndorsement.claim.en.mode}
        </td>
       </tr>
       <tr>
@@ -443,10 +443,10 @@ export default function EDSEndorsement ({
        <td>
        </td>
        <td class="lang-1">
-        ${edsEndorsement.claim.requirements}
+        ${edsEndorsement.claim.ca.requirements}
        </td>
        <td class="lang-2">
-        #TODO
+        ${edsEndorsement.claim.en.requirements}
        </td>
       </tr>
       <tr>
@@ -547,10 +547,10 @@ export default function EDSEndorsement ({
        <td>
        </td>
        <td class="lang-1">
-        ${edsEndorsement.claim.gradingScheme}
+        ${edsEndorsement.claim.ca.gradingScheme}
        </td>
        <td class="lang-2">
-        #TODO
+        ${edsEndorsement.claim.en.gradingScheme}
        </td>
       </tr>
       <tr>
@@ -573,10 +573,10 @@ export default function EDSEndorsement ({
        <td>
        </td>
        <td class="lang-1">
-        Qualificació global: ${edsEndorsement.claim.qualification} punts
+        Qualificació global: ${edsEndorsement.claim.ca.qualification} punts
        </td>
        <td class="lang-2">
-        Overall classification: ${edsEndorsement.claim.qualification} points
+        Overall classification: ${edsEndorsement.claim.en.qualification} points
        </td>
       </tr>
      </tbody>
@@ -621,9 +621,10 @@ export default function EDSEndorsement ({
        <td>
        </td>
        <td class="lang-1">
-        ${edsEndorsement.claim.further}
+        ${edsEndorsement.claim.ca.further}
        </td>
        <td class="lang-2">
+        ${edsEndorsement.claim.en.further}
         #TODO
        </td>
       </tr>
@@ -647,10 +648,10 @@ export default function EDSEndorsement ({
        <td>
        </td>
        <td class="lang-1">
-        ${edsEndorsement.claim.competences}
+        ${edsEndorsement.claim.ca.competences}
        </td>
        <td class="lang-2">
-        #TODO
+        ${edsEndorsement.claim.en.competences}
        </td>
       </tr>
      </tbody>
@@ -679,10 +680,10 @@ export default function EDSEndorsement ({
        <td>
        </td>
        <td class="lang-1">
-        ${edsEndorsement.claim.extraInfo}
+        ${edsEndorsement.claim.ca.extraInfo}
        </td>
        <td class="lang-2">
-        #TODO
+        ${edsEndorsement.claim.en.extraInfo}
        </td>
       </tr>
      </tbody>
