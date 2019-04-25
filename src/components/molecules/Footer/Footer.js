@@ -2,8 +2,8 @@ import '../../atoms/FileUpload';
 import '../../atoms/VerifyOtherCertificateLink';
 import { html } from '@polymer/lit-element';
 import CSS from './_components.footer-css';
-import BlockcertsLogo from '../../atoms/BlockcertsLogo/BlockcertsLogo';
 import * as THEME from '../../../constants/theme';
+import CowcertsLogo from "../../atoms/CowcertsLogo";
 
 const Footer = ({forceInPlace = false, interactive = false, theme} = {}) => {
   const classes = [
@@ -22,7 +22,7 @@ const Footer = ({forceInPlace = false, interactive = false, theme} = {}) => {
     </section>`
     : ''
 }
-    ${BlockcertsLogo()}
+    ${CowcertsLogo()}
   </footer>`;
 };
 
