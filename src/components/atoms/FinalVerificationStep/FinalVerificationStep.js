@@ -5,9 +5,9 @@ import { localOtherChain, blockvalleyOtherChainPrefix } from '../../../constants
 export default function FinalVerificationStep ({ chain = '', transactionLink = '', isTestChain, isVisible = false, otherChain = null}) {
 
   let chainClass = '';
-  if(otherChain.startsWith(blockvalleyOtherChainPrefix)) {
+  if(otherChain && otherChain.startsWith(blockvalleyOtherChainPrefix)) {
     chainClass = 'is-blockvalley'
-  } else if (otherChain === localOtherChain) {
+  } else if (otherChain && otherChain === localOtherChain) {
     chainClass = 'is-local';
   } else if(isTestChain) {
     chainClass = 'is-test';
@@ -33,9 +33,9 @@ export default function FinalVerificationStep ({ chain = '', transactionLink = '
 
   let title = 'Verified';
 
-  if(otherChain.startsWith(blockvalleyOtherChainPrefix)) {
+  if(otherChain && otherChain.startsWith(blockvalleyOtherChainPrefix)) {
     title = 'Verified on BlockValley';
-  } else if(otherChain === localOtherChain) {
+  } else if(otherChain && otherChain === localOtherChain) {
     title = 'This dummy certificate has been verified on a dummy blockchain.';
   } else if(isTestChain) {
     title = 'This Mocknet credential passed all checks';
@@ -45,12 +45,12 @@ export default function FinalVerificationStep ({ chain = '', transactionLink = '
       <a class='buv-o-link' href='${transactionLink}' hidden?='${!transactionLink}'>
         <span class='buv-o-link__text--underline'>View transaction link</span>
       </a>`;
-  if(otherChain.startsWith(blockvalleyOtherChainPrefix)) {
+  if(otherChain && otherChain.startsWith(blockvalleyOtherChainPrefix)) {
     details = html`This is a valid certificate issued on a BlockValley chain.<br/>
       <a class='buv-o-link' href='${transactionLink}' hidden?='${!transactionLink}'>
         <span class='buv-o-link__text--underline'>View transaction link</span>
       </a>`;
-  } else if(otherChain === localOtherChain) {
+  } else if(otherChain && otherChain === localOtherChain) {
     details = 'This certificate has been verified, but on a local blockchain' +
         ' just for development purposes, so please, do not consider it valid';
   } else if (isTestChain) {
