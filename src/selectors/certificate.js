@@ -145,6 +145,16 @@ export function getChain (state) {
   return '';
 }
 
+export function getOtherChain(state) {
+  const certificateDefinition = getCertificateDefinition(state);
+
+  if (certificateDefinition && certificateDefinition.otherChain) {
+    return certificateDefinition.otherChain;
+  }
+
+  return null;
+}
+
 export function isTestChain (state) {
   const chain = getChain(state);
 

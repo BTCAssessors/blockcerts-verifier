@@ -4,7 +4,8 @@ import {
   getChain,
   getTransactionLink,
   getVerifiedSteps,
-  isTestChain
+  isTestChain,
+  getOtherChain
 } from '../../../selectors/certificate';
 import VERIFICATION_STATUS from '../../../constants/verificationStatus';
 
@@ -16,7 +17,8 @@ export const mapStateToProps = (state) => {
     transactionLink: getTransactionLink(state),
     chain: getChain(state),
     isTestChain: isTestChain(state),
-    hasError
+    hasError,
+    otherChain: getOtherChain(state)
   };
 };
 
