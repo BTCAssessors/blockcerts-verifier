@@ -45,7 +45,7 @@ class VisualizerTabs extends LitElement {
         }
     }
 
-    _render({hasCertificateDefinition, edsEndorsement}) {
+    _render({hasCertificateDefinition, edsEndorsement, fullCertificate}) {
         if (!hasCertificateDefinition) {
             return null;
         }

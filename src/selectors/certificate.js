@@ -7,6 +7,13 @@ export function getCertificateDefinition (state) {
   return state.certificateDefinition;
 }
 
+export function getCertificateFullDefinition (state) {
+  if(getCertificateDefinition(state))
+    return state.certificateDefinition.certificateJson;
+  else
+    return null;
+}
+
 export function getIssuedOn (state) {
   const certificateDefinition = getCertificateDefinition(state);
 
