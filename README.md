@@ -1,4 +1,7 @@
-# \<blockcerts-verifier\>
+# \<cowcerts-verifier\>
+
+## Fork of blockcerts-verifier to provide extra validations defined per the
+## [Cowcerts][https://cowcerts.org] standard
 
 [![Build Status](https://travis-ci.com/blockchain-certificates/blockcerts-verifier.svg?branch=master)](https://travis-ci.com/blockchain-certificates/blockcerts-verifier)
 [![codecov](https://codecov.io/gh/blockchain-certificates/blockcerts-verifier/branch/master/graph/badge.svg)](https://codecov.io/gh/blockchain-certificates/blockcerts-verifier)
