@@ -14,6 +14,28 @@ export function getCertificateFullDefinition (state) {
     return null;
 }
 
+// TODO: Better way
+export function isCowcertsCertificate(state) {
+
+  let certificate = getCertificateFullDefinition(state);
+  if(!certificate)
+    return false;
+
+  let context = certificate['@context'];
+  let isCowcerts = false;
+  if(context instanceof Array) {
+    context.forEach((contextObject) => {
+      if(contextObject instanceof Object) {
+        if(Object.keys(contextObject).includes('cow') &&
+           contextObject['cow'].includes('https://w3id.org/cowcerts/edu/')) {
+          isCowcerts = true
+        }
+      }
+    });
+  }
+  return isCowcerts;
+}
+
 export function getIssuedOn (state) {
   const certificateDefinition = getCertificateDefinition(state);
 
